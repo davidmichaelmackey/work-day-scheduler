@@ -8,7 +8,7 @@ const storage = `timeBlocks`;
 // 
 // display current day
 // 
-$(`#currentDay`).text(today.format(`dddd, MMM Do`));
+$(`#currentDay`).text(today.format(`dddd, MMM D`));
 // 
 // check for existing localStorage
 // if from current date > load
