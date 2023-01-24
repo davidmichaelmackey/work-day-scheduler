@@ -59,7 +59,7 @@ function pastPresentOrFuture(hour) {
   }
 }
 // 
-// create dynamic time blocks w/ info from localStorage
+// make dynamic time blocks from localStorage
 // 
 function createBlock(time) {
   let task = "";
@@ -83,4 +83,14 @@ function createBlock(time) {
     $(`<button class="saveBtn col-2"><i class="fas fa-save"></i></div>`)
   );
   container.append(freshBlock);
+}
+// 
+// call function to initilize localStorage
+// 
+initializeLocalStorage();
+// 
+for (let key in timeBlocks) {
+  if (key != `currentDate`) {
+    createBlock(key);
+  }
 }
