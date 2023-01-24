@@ -1,7 +1,7 @@
 // 
 // global variables
 // 
-let today = moment();
+let today = dayjs();
 let currentHour = today.format(`H`);
 let timeBlocks = {};
 const storage = `timeBlocks`;
