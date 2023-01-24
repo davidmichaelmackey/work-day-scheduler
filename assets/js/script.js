@@ -94,3 +94,37 @@ for (let key in timeBlocks) {
     createBlock(key);
   }
 }
+// 
+// create click-event updating localStorage w/ input into timeBlock
+// change icon to check mark
+// 
+$(`.row`).on(`click`, `.saveBtn`, function (e) {
+  let task = ``;
+  let index = ``;
+  if (e.target.matches(`i`)) {
+    task = $(e.target).parent().siblings().eq(1).val().trim();
+    index = $(e.target).parent().siblings().eq(1).data().key;
+    if (task.length > 0) {
+      timeBlocks[index] = task;
+      localStorage.setItem(storage, JSON.stringify(timeBlocks));
+      $(e.target)
+        .addClass(`fa-check-circle`)
+        .addClass(`text-dark`)
+        .removeClass(`fa-save`);
+      $(e.target).parent().siblings().eq(1).addClass(`text-dark`);
+    }
+  } else {
+    task = $(e.target).siblings().eq(1).val();
+    index = $(e.target).siblings().eq(1).data().key;
+    if (task.length > 0) {
+      timeBlocks[index] = task;
+      localStorage.setItem(storage, JSON.stringify(timeBlocks));
+      $(e.target)
+        .children()
+        .addClass("fa-check-circle")
+        .addClass("text-dark")
+        .removeClass("fa-save");
+      $(e.target).siblings().eq(1).addClass("text-dark");
+    }
+  }
+})
