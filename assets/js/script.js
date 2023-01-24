@@ -32,8 +32,9 @@ function initializeLocalStorage() {
   }
   localStorage.setItem(storage, JSON.stringify(timeBlocks));
 }
-
+// 
 // convert time to readable string (human readable format, am & pm)
+// 
 function hourString(hour) {
   if (hour < 12) {
     return hour + `am`;
@@ -43,3 +44,18 @@ function hourString(hour) {
     return hour - 12 + `pm`;
   }
 }
+// 
+// compare current time to timeblock and color
+// 
+function pastPresentOrFuture(hour) {
+  hour = Number(hour);
+  currentHour = Number(currentHour);
+  if (hour > currentHour) {
+    return `future`;
+  } else if (hour == currentHour) {
+    return `present`;
+  } else {
+    return `past`;
+  }
+}
+
