@@ -14,7 +14,7 @@ $(`#currentDay`).text(today.format(`dddd, MMM Do`));
 // if from current date > load
 // if not > clear
 // 
-function initLocalStorage() {
+function initializeLocalStorage() {
   if (localStorage.getItem(storage)) {
     timeBlocks = JSON.parse(localStorage.getItem(storage));
     if (timeBlocks.currentDate == today.format(`MM/DD/YYYY`)) {
