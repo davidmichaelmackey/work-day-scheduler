@@ -16,7 +16,7 @@ Work Day Scheduler is a simple calendar application that allows users to save ev
 
 ## Installation
 
-No installation necessary! This web app runs on most modern browsers.
+No installation necessary! This web app will run on most modern browsers like Chrome, FireFox, Opera, etc...
 <br>
 Click the link to the deployment below to open the web application.
 
@@ -36,16 +36,25 @@ Please refer to license in Repo.
 
 [jQuery](https://api.jquery.com)
 <br>
+
 [Traversing](https://api.jquery.com/category/traversing/)
 <br>
+
 [Events](https://api.jquery.com/category/events/)
 <br>
+
 [Bootstrap 5](https://getbootstrap.com)
 <br>
+
 [jQuery UI](https://jqueryui.com/demos/)
 <br>
+
 [Day.js](https://day.js.org)
 
 ## Repository
 
+[Repository](https://github.com/davidmichaelmackey/work-day-scheduler)
+
 ## Deployment
+
+[Deployment](https://davidmichaelmackey.github.io/work-day-scheduler/)
