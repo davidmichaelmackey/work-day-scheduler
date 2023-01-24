@@ -58,4 +58,29 @@ function pastPresentOrFuture(hour) {
     return `past`;
   }
 }
-
+// 
+// create dynamic time blocks w/ info from localStorage
+// 
+function createBlock(time) {
+  let task = "";
+  if (timeBlocks[time]) {
+    task = timeBlocks[time];
+  }
+  const textArea = $(
+    `<textarea class="description" data-key=` +
+    time +
+    `>` +
+    task +
+    `</textarea>`
+  );
+  const container = $(`.container`);
+  const freshBlock = $(`<div class="row"></div>`);
+  // 
+  freshBlock.append($(`<div class="hour col-2">` + hourString(time) + `</div>`));
+  textArea.addClass(pastPresentOrFuture(time) + ` col-8`);
+  freshBlock.append($(textArea));
+  freshBlock.append(
+    $(`<button class="saveBtn col-2"><i class="fas fa-save"></i></div>`)
+  );
+  container.append(freshBlock);
+}
