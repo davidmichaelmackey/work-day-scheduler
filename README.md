@@ -53,8 +53,8 @@ Please refer to license in Repo.
 
 ## Repository
 
-[Repository](https://github.com/davidmichaelmackey/work-day-scheduler)
+[Repository](https://github.com/davidmichaelmackey/work-day-scheduler/)
 
 ## Deployment
 
-[Deployment](https://davidmichaelmackey.github.io/work-day-scheduler/)
+[Work Day Scheduler](https://davidmichaelmackey.github.io/work-day-scheduler/)
